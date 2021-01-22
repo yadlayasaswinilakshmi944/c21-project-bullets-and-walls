@@ -13,7 +13,7 @@ weight=random(30, 52);
 bullet.velocityX = speed;
 bullet.shapeColor="white";
 
-wall=createSprite(1000, 200, thickness, height/2);
+wall=createSprite(1000, 200, 20, height/2);
 wall.shapeColor=(80,80,80);
 
 }
@@ -30,11 +30,11 @@ function draw() {
       
       
       if(damage>10){
-        wall.shapeColor=color(225, 0, 0);
+        wall.shapeColor="green";
       }
   
       if(damage<10){
-        wall.shapeColor=color(0, 255, 0);
+        wall.shapeColor="red";
       }
     }
   drawSprites();
@@ -49,6 +49,7 @@ if(bulletRightEdge>=wallLeftEdge){
 
   return true;
 }
-
+else {
 return false;
+}
 }
